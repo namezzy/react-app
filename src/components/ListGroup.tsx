@@ -1,12 +1,15 @@
 import { Fragment } from "react/jsx-runtime";
-import { MouseEvent } from "react";
+
 import Message from "../Message";
+import { useState } from "react";
 
 function ListGroup() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+  // Hook 
+  const [selectedIndex, setSelectedIndex] = useState(-1); 
 
-  // Event handler
-  const handleClick = (event: MouseEvent) => console.log(event);
+
+
 
   const getMessage = () => {
     return items.length === 0 ? <p>No item found.</p> : null;
@@ -20,8 +23,8 @@ function ListGroup() {
       <ul className="list-group">
         {items.map((item, index) => (
           <li
-            className="list-group-item"
-            onClick={handleClick}
+            className={selectedIndex === index  ? 'list-group-item active': 'list-group-item'}
+            onClick={() => {setSelectedIndex(index)}}
             key={index}
           >
             {item}
