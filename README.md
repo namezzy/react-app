@@ -29,8 +29,8 @@ The project utilizes the following packages:
 To deploy the project, follow these steps:
 1. **Clone the repository**:
    ```sh
-   git clone [https://github.com/namezzy/react-app.git]
-   cd [react-app]
+   git clone https://github.com/namezzy/react-app.git
+   cd react-app
    ```
 
 2. **Install dependencies**:
