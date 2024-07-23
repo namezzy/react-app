@@ -4,7 +4,7 @@ import ListGroup from "./components/ListGroup";
 function App() {
   return (
     <div>
-      <Alert> 
+      <Alert onClose={()=>console.log("hello")}> 
         Hello <span>World</span>
       </Alert>
     </div>
